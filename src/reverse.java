@@ -6,7 +6,7 @@ public class reverse {
         Scanner input = new Scanner(System.in);
         System.out.println("enter a word");
         String word = input.nextLine();
-      //converting to char
+      //converting to character
         char[] letter = word.toCharArray();
         for (int i = letter.length - 1; i >= 0; i=i-1)
             System.out.print(letter[i]);
