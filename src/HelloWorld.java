@@ -9,6 +9,8 @@ public class HelloWorld {
         boolean g = false;
         byte h = 127;
         String t = "hi there";
+        int x = 3 % 10;
+        System.out.println(x);
         System.out.println(f);
         System.out.println(g);
         System.out.println(h);
@@ -18,6 +20,6 @@ public class HelloWorld {
         System.out.println(b);
         System.out.println(a);
         System.out.println("hello world");
-        System.out.println(t );
+        System.out.println(t);
     }
 }

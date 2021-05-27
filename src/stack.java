@@ -10,6 +10,7 @@ public class stack {
 
         for (int i = 0; i < b.length; i++) {
             a.push(b[i]);
+
         }
         int[] reverse = new int[length];
         for (int i = 0; i < b.length; i++) {

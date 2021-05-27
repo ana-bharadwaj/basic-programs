@@ -5,14 +5,15 @@ public class palindrome {
         Scanner input = new Scanner(System.in);
         System.out.println("enter a sentence");
         String sentence = input.nextLine();
+        String reverse="";
         // reverse the sentence then check if both the strings are the same
         char[] letter = sentence.toCharArray();
         for (int i = letter.length - 1; i >= 0; i--) {
             char a = letter[i];
-            String reverse = String.valueOf(a);
+             reverse = String.valueOf(a);
         }
 
-        if (sentence.equals(reserve)) {
+        if (sentence.equals(reverse)) {
             System.out.println("its a palindrome ");
             ;
 
