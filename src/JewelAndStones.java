@@ -19,7 +19,7 @@ public class JewelAndStones {
     }
 
     public int numJewelsInStones(String jewels, String stones) {
-        // Your code goes here ...
+        System.out.print("hi");
         return 0;
     }
 }
