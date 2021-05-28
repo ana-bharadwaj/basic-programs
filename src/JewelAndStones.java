@@ -11,15 +11,22 @@
  * Input: jewels = "z", stones = "ZZ"
  * Output: 0
  */
-
-public class JewelAndStones {
-    public static void main(String[] args) {
-        System.out.println("The number of jewels in the stone 'aAAbbbb' are: "+ new JewelAndStones().numJewelsInStones("aA", "aAAbbbb"));
-        System.out.println("The number of jewels in the stone 'aAAbbbb' are: "+ new JewelAndStones().numJewelsInStones("z", "ZZ"));
-    }
-
-    public int numJewelsInStones(String jewels, String stones) {
-        System.out.print("hi");
-        return 0;
-    }
+public class JewelAndStones{
+public static void main(String[]args){ String jewels="z";
+String stones="fkgkdjgkzk";int count=0;
+char []a=jewels.toCharArray();
+char [] b=stones.toCharArray();
+for (int i=0;i<a.length;i++){
+char c=a[i];
+for(int j=0;j<b.length;j++){
+char d =b[j];
+if(d==c){
+count++;
+}
+else
+{count=count+0;}
+}
+}
+System.out.println(count);
+}
 }
