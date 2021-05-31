@@ -14,12 +14,26 @@
 
 public class JewelAndStones {
     public static void main(String[] args) {
-        System.out.println("The number of jewels in the stone 'aAAbbbb' are: "+ new JewelAndStones().numJewelsInStones("aA", "aAAbbbb"));
-        System.out.println("The number of jewels in the stone 'aAAbbbb' are: "+ new JewelAndStones().numJewelsInStones("z", "ZZ"));
+        System.out.println("The number of jewels in the stone 'aAAbbbb' are: " + new JewelAndStones().numJewelsInStones("aA", "aAAbbbb"));
+        System.out.println("The number of jewels in the stone 'aAAbbbb' are: " + new JewelAndStones().numJewelsInStones("z", "ZZ"));
     }
 
+
     public int numJewelsInStones(String jewels, String stones) {
-        // Your code goes here ...
-        return 0;
+        int count = 0;
+        char[] a = jewels.toCharArray();
+        char[] b = stones.toCharArray();
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < b.length; j++) {
+
+                if (a[i]==b[j]) {
+                    count++;
+                }
+
+            }
+
+
+        }
+        return count;
     }
 }
