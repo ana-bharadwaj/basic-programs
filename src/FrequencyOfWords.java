@@ -1,5 +1,3 @@
-import java.util.HashMap;
-
 /**
  * Find the frequency of the words existing in a given string
  *
