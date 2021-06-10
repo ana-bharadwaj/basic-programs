@@ -1,26 +1,23 @@
 /**
  * Valid Anagram
- *
+ * <p>
  * Given two strings s and t, return true if t is an anagram of s, and false otherwise.
- *
- *
+ * <p>
+ * <p>
  * Example 1:
  * Input: s = "anagram", t = "nagaram"
  * Output: true
- *
+ * <p>
  * Example 2:
  * Input: s = "rat", t = "car"
  * Output: false
- *
+ * <p>
  * Constraints:
- *
- *     1 <= s.length, t.length <= 5 * 104
- *     s and t consist of lowercase English letters.
+ * <p>
+ * 1 <= s.length, t.length <= 5 * 104
+ * s and t consist of lowercase English letters.
  */
-
-
-
-import java.util.HashMap;
+/*import java.util.HashMap;
 
 public class ValidAnagram {
     public static void main(String[] args) {
@@ -30,6 +27,7 @@ public class ValidAnagram {
     }
 
     public boolean isAnagram(String s, String t) {
+        //your code goes here
         HashMap<Character, Integer> Set1 = new HashMap();
         HashMap<Character, Integer> Set2 = new HashMap();
         char[] LoS = s.toCharArray();
@@ -46,12 +44,40 @@ public class ValidAnagram {
                 Set2.put(LoS[i], Set2.get(LoT[i]) + 1);
             }
 
+        return true;
         }
         if (Set1.equals(Set2)) {
             return true;
         }
-        else {
+
+            return false;
+
+    }
+} */
+
+
+import java.util.Arrays;
+
+public class ValidAnagram {
+    public static void main(String[] args) {
+        ValidAnagram validAnagram = new ValidAnagram();
+        System.out.println(validAnagram.isAnagram("anagram", "nagaram"));
+        System.out.println(validAnagram.isAnagram("rat", "car"));
+    }
+
+    public boolean isAnagram(String s, String t) {
+        char[] lettersOfs = s.toCharArray();
+        char[] lettersOft = t.toCharArray();
+        if ((s.length() != t.length()) {
             return false;
         }
+
+        Arrays.sort(lettersOfs);
+        Arrays.sort(lettersOft);
+        if (Arrays.equals(lettersOfs, lettersOft)) {
+            return true;
+        }
+        return false;
+
     }
 }
