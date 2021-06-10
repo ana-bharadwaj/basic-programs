@@ -15,6 +15,7 @@
  */
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class FreqOfWords2 {
     public static void main(String[] args) {
@@ -29,12 +30,9 @@ public class FreqOfWords2 {
 
 
         for (String word : s1) {
-            if (!map.containsKey(word)) {
+
                 map.put(word, 0);
-            } else {
-                int ke = map.get(word);
-                map.put(word, ke + 1);
-            }
+
         }
         for (String s2word : s2) {
             if (map.containsKey(s2word)) {
@@ -42,8 +40,10 @@ public class FreqOfWords2 {
             }
 
         }
-        System.out.println(map);
+        for (Map.Entry<String,Integer> entry:map.entrySet()){
+            System.out.println(entry.getKey()+"->"+entry.getValue());
+        }
     }
-
-
 }
+
+
